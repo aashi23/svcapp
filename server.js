@@ -3,7 +3,7 @@ var bodyParser=require('body-parser');
 var app = express();
 var fbapi = require('facebook-api');
 var client = fbapi.user(null); 
-
+var mongoose=require('mongoose');
 
 //var mongojs=require('mongojs');
 //var db=mongojs("26jan",["svc1"]);
