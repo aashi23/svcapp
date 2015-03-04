@@ -3,11 +3,11 @@ var bodyParser=require('body-parser');
 var app = express();
 var fbapi = require('facebook-api');
 var client = fbapi.user(null); 
-var mongoose=require('mongoose');
+//var mongoose=require('mongoose');
 
-//var mongojs=require('mongojs');
+var mongojs=require('mongojs');
 //var db=mongojs("26jan",["svc1"]);
-mongoose.connect('mongodb://aashi23:tiger@ds049537.mongolab.com:49537/svc')
+mongojs.connect('mongodb://aashi23:tiger@ds049537.mongolab.com:49537/svc');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
