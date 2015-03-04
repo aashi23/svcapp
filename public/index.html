@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
- <!--  <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  -->
+   <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  
   <title>Index</title>
    
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
@@ -11,13 +11,13 @@
 </head>
  
 <body ng-app="">
-<div ng-controller="ServicesCtrl">
+<div class="container" ng-controller="ServicesCtrl">
     
     <h1><font face="chiller" color="green"><b>Welcome to MEAN - FacebookAPI app :) </b></font>  </h1>
     
     <h3> <font face="chiller" color="brown"><b> {{message}} </b></font> </h3>
     
-    <table>
+    <table class="table table-striped">
     <thead>
         <tr>
         <th>Username</th><th>&nbsp</&nbsp></th>
@@ -25,10 +25,10 @@
     
         <tr>
         <td>
-        <input class="text" ng-model="serviceClient.name">    
+        <input class="form-control" ng-model="serviceClient.name">    
         </td>
         <td>
-        <button  ng-click="create()">Add User</button>
+        <button class="btn btn-primary" ng-click="create()"><span class="glyphicon glyphicon-user"></span>Add User</button>
         
         </td>
         </tr>
@@ -40,13 +40,13 @@
         {{serviceClient.name}}
         </td> 
     <td>
-        <button  ng-click="remove(serviceClient._id)">Delete User</button>
-        <button  ng-click="select(serviceClient._id)">Find Details</button>
+        <button class="btn btn-danger" ng-click="remove(serviceClient._id)"><span class="glyphicon glyphicon-remove-2"></span>Delete User</button>
+        <button class="btn btn-info" ng-click="select(serviceClient._id)"><span class="glyphicon glyphicon-search"></span>Find Details</button>
         </td>
         </tr>    
     </tbody>
     </table>
-    <table>
+    <table class="table">
         <thead><tr><td>Name</td><td>Gender</td><td>Locale</td></tr></thead>
     <tr><td>
         <input class="text" ng-model="fname"/>
